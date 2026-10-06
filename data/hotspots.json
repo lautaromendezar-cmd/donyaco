@@ -1,0 +1,182 @@
+{
+  "_nota": "x/y en porcentaje sobre el cuadro del video (no de la pantalla). Ajustar a mano cuando estén los videos finales. null = no se ve en ese encuadre: queda en el recorrido y en las tarjetas.",
+  "hotspots": [
+    {
+      "id": "arbol",
+      "etiqueta": "El árbol de la dulzura",
+      "titulo": "El árbol de la dulzura",
+      "bajada": "La historia de Don Yaco",
+      "texto": [
+        "Don Yaco empezó en Villa Urquiza hace más de diez años, como la golosinería del barrio. En septiembre de 2026 abrió el Bosque Urbano en Belgrano: un local entero convertido en bosque, con este árbol en el centro.",
+        "El tronco es trenzado y se apoya sobre piedras redondas. Entre las ramas hay lucecitas azules que se prenden y se apagan despacio. Los chicos lo rodean, los grandes le sacan fotos."
+      ],
+      "cta": {
+        "texto": "Visitá el Bosque",
+        "href": "/visita"
+      },
+      "tarjeta": "La historia de Don Yaco y del Bosque Urbano.",
+      "posicion": {
+        "mobile": {
+          "x": 52,
+          "y": 46
+        },
+        "desktop": {
+          "x": 72,
+          "y": 42
+        }
+      }
+    },
+    {
+      "id": "cartel",
+      "etiqueta": "El cartel de entrada",
+      "titulo": "Cómo llegar",
+      "bajada": "Dos sucursales en CABA",
+      "texto": [
+        "El cartel tallado en madera de la entrada, rodeado de musgo y caramelos, marca el Bosque Urbano de Belgrano. El local histórico sigue en Villa Urquiza."
+      ],
+      "tipo": "como-llegar",
+      "cta": {
+        "texto": "Ver las sucursales",
+        "href": "/sucursales/bosque-urbano"
+      },
+      "tarjeta": "Las dos sucursales, con mapa y horarios.",
+      "posicion": {
+        "mobile": null,
+        "desktop": null
+      }
+    },
+    {
+      "id": "caramelera",
+      "etiqueta": "La caramelera",
+      "titulo": "Armá tu caja",
+      "bajada": "Elegí vos qué va adentro",
+      "texto": [
+        "Elegí el envase (bolsa, lata, caja regalo o frasco) y llenalo con lo que más te guste: chocolates, alfajores, gomitas a granel, importados o sin TACC.",
+        "Cuando la tenés lista, la pedís por WhatsApp y la retirás en la sucursal que te quede más cerca."
+      ],
+      "cta": {
+        "texto": "Armá tu caja",
+        "href": "/arma-tu-caja"
+      },
+      "tarjeta": "Bolsa, lata, caja o frasco, llenos con lo que vos elijas.",
+      "posicion": {
+        "mobile": {
+          "x": 22,
+          "y": 62
+        },
+        "desktop": {
+          "x": 17,
+          "y": 62
+        }
+      }
+    },
+    {
+      "id": "hongos",
+      "etiqueta": "Los hongos gigantes",
+      "titulo": "Cumpleaños y mesas dulces",
+      "bajada": "Para que el cumple tenga su bosque",
+      "texto": [
+        "Armamos mesas dulces y bolsitas para cumpleaños, con la temática que quieras. Contanos cuántos invitados van a ser, la fecha y en qué sucursal te queda mejor, y te pasamos un presupuesto."
+      ],
+      "cta": {
+        "texto": "Cotizar un cumpleaños",
+        "href": "/cumpleanos"
+      },
+      "whatsapp": "cumple",
+      "tarjeta": "Mesas dulces y bolsitas con la temática que quieras.",
+      "posicion": {
+        "mobile": {
+          "x": 74,
+          "y": 66
+        },
+        "desktop": {
+          "x": 58,
+          "y": 77
+        }
+      }
+    },
+    {
+      "id": "puertas",
+      "etiqueta": "Las puertas de hadas",
+      "titulo": "Regalos y cajas especiales",
+      "bajada": "Cajas armadas para regalar",
+      "texto": [
+        "Cajas regalo, latas coleccionables y combinaciones de chocolates importados, listas para llevar o para armar a medida. Se puede sumar una tarjeta con dedicatoria."
+      ],
+      "cta": {
+        "texto": "Ver regalos",
+        "href": "/arma-tu-caja"
+      },
+      "whatsapp": "regalo",
+      "tarjeta": "Cajas, latas y chocolates importados para regalar.",
+      "posicion": {
+        "mobile": {
+          "x": 76,
+          "y": 36
+        },
+        "desktop": {
+          "x": 88,
+          "y": 48
+        }
+      }
+    },
+    {
+      "id": "estanterias",
+      "etiqueta": "Las estanterías",
+      "titulo": "Atracciones del Bosque",
+      "bajada": "Lo que no te podés perder",
+      "texto": [
+        "Las estanterías curvas de madera guardan lo mejor del local. Recorrelas por sector:"
+      ],
+      "lista": [
+        "El sector Kinder más grande de Capital",
+        "Más de 200 variedades de alfajores",
+        "Alfajores sin TACC",
+        "Chocolates importados y la línea Milka gigante",
+        "Latas coleccionables",
+        "Gomitas y caramelos a granel"
+      ],
+      "cta": {
+        "texto": "Ver las atracciones",
+        "href": "/atracciones"
+      },
+      "tarjeta": "Kinder, alfajores, importados, sin TACC y latas.",
+      "posicion": {
+        "mobile": {
+          "x": 20,
+          "y": 41
+        },
+        "desktop": {
+          "x": 33,
+          "y": 54
+        }
+      }
+    },
+    {
+      "id": "puerta-pequena",
+      "etiqueta": "Una puerta pequeña",
+      "titulo": "Empresas y mayoristas",
+      "bajada": "Detrás de la puerta chiquita",
+      "texto": [
+        "Regalos corporativos, cajas de fin de año para equipos y clientes, y precios mayoristas para kioscos. Escribinos con la cantidad aproximada y te armamos una propuesta."
+      ],
+      "cta": {
+        "texto": "Ver propuesta para empresas",
+        "href": "/empresas"
+      },
+      "whatsapp": "mayorista",
+      "escondido": true,
+      "tarjeta": "Regalos corporativos y precios para kioscos.",
+      "posicion": {
+        "mobile": {
+          "x": 84,
+          "y": 54
+        },
+        "desktop": {
+          "x": 93,
+          "y": 70
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "bosque-urbano",
+    "nombre": "Don Yaco Bosque Urbano",
+    "nombreCorto": "Bosque Urbano",
+    "barrio": "Belgrano",
+    "direccion": "Av. Luis María Campos 1461",
+    "localidad": "CABA",
+    "coordenadas": { "lat": -34.5672, "lng": -58.4376, "aproximadas": true },
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=Don+Yaco+Golosiner%C3%ADa+Av.+Luis+Mar%C3%ADa+Campos+1461+CABA",
+    "mapaEmbed": "https://www.google.com/maps?q=Av.+Luis+Mar%C3%ADa+Campos+1461,+CABA&output=embed",
+    "horarios": {
+      "confirmado": false,
+      "detalle": [
+        { "dias": "Lunes a sábado", "abre": "10:00", "cierra": "21:00" },
+        { "dias": "Domingos y feriados", "abre": "11:00", "cierra": "20:00" }
+      ]
+    },
+    "descripcion": "El local nuevo, inaugurado en septiembre de 2026. Un bosque encantado con un árbol gigante en el centro, hongos del tamaño de una persona y puertas de hadas pintadas en las paredes.",
+    "destacado": "El árbol de la dulzura y el sector Kinder más grande de Capital."
+  },
+  {
+    "slug": "villa-urquiza",
+    "nombre": "Don Yaco Villa Urquiza",
+    "nombreCorto": "Villa Urquiza",
+    "barrio": "Villa Urquiza",
+    "direccion": "Av. Olazábal 5334",
+    "localidad": "CABA",
+    "coordenadas": { "lat": -34.5761, "lng": -58.4862, "aproximadas": true },
+    "googleMaps": "https://www.google.com/maps/search/?api=1&query=Don+Yaco+Golosiner%C3%ADa+Av.+Olaz%C3%A1bal+5334+CABA",
+    "mapaEmbed": "https://www.google.com/maps?q=Av.+Olaz%C3%A1bal+5334,+CABA&output=embed",
+    "horarios": {
+      "confirmado": false,
+      "detalle": [
+        { "dias": "Lunes a sábado", "abre": "10:00", "cierra": "21:00" },
+        { "dias": "Domingos y feriados", "abre": "11:00", "cierra": "20:00" }
+      ]
+    },
+    "descripcion": "El local de siempre. Hace más de diez años que Villa Urquiza viene a buscar acá sus golosinas.",
+    "destacado": "La golosinería del barrio, con todo lo de siempre y las novedades importadas."
+  }
+]

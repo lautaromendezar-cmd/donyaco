@@ -1,0 +1,28 @@
+{
+  "_nota": "Las luces y los hotspots usan x/y en porcentaje sobre el cuadro del video. Si cambia la cantidad de frames del recorrido, actualizar 'cantidad'.",
+  "hero": {
+    "mobile": { "video": "/scene/hero-mobile", "poster": "/scene/hero-mobile-poster.webp", "ancho": 1080, "alto": 1920 },
+    "desktop": { "video": "/scene/hero-desktop", "poster": "/scene/hero-desktop-poster.webp", "ancho": 1920, "alto": 1080 }
+  },
+  "puerta": "/scene/puerta",
+  "recorrido": {
+    "desktop": { "carpeta": "/scene/recorrido", "cantidad": 120, "ancho": 1920, "alto": 1080 },
+    "mobile": { "carpeta": "/scene/recorrido-mobile", "cantidad": 60, "ancho": 720, "alto": 1280 }
+  },
+  "lucesArbol": {
+    "mobile": [
+      { "x": 44, "y": 30, "r": 1.0 }, { "x": 55, "y": 26, "r": 0.8 }, { "x": 38, "y": 38, "r": 0.7 },
+      { "x": 61, "y": 35, "r": 1.0 }, { "x": 48, "y": 41, "r": 0.6 }, { "x": 33, "y": 27, "r": 0.8 },
+      { "x": 67, "y": 24, "r": 0.7 }, { "x": 52, "y": 50, "r": 0.9 }, { "x": 45, "y": 57, "r": 0.6 },
+      { "x": 56, "y": 60, "r": 0.8 }, { "x": 42, "y": 21, "r": 0.6 }, { "x": 72, "y": 31, "r": 0.6 },
+      { "x": 28, "y": 34, "r": 0.5 }, { "x": 50, "y": 33, "r": 0.7 }
+    ],
+    "desktop": [
+      { "x": 66, "y": 24, "r": 1.0 }, { "x": 74, "y": 20, "r": 0.8 }, { "x": 70, "y": 33, "r": 0.7 },
+      { "x": 79, "y": 30, "r": 1.0 }, { "x": 63, "y": 38, "r": 0.6 }, { "x": 60, "y": 22, "r": 0.8 },
+      { "x": 84, "y": 22, "r": 0.7 }, { "x": 72, "y": 46, "r": 0.9 }, { "x": 69, "y": 55, "r": 0.6 },
+      { "x": 76, "y": 58, "r": 0.8 }, { "x": 68, "y": 14, "r": 0.6 }, { "x": 82, "y": 40, "r": 0.6 },
+      { "x": 57, "y": 30, "r": 0.5 }, { "x": 74, "y": 38, "r": 0.7 }
+    ]
+  }
+}

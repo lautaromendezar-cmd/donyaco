@@ -1,0 +1,318 @@
+@import "tailwindcss";
+
+:root {
+  --yaco-rojo: #c8202a;
+  --yaco-rojo-oscuro: #a3161f;
+  --musgo: #2f4a2a;
+  --musgo-noche: #1a2a17;
+  --hoja: #5e8c3a;
+  --hoja-oscura: #3f6b26;
+  --luz-hada: #4fd6ff;
+  --cielo: #8fc3e8;
+  --madera: #d9a86c;
+  --corteza: #6b4226;
+  --corteza-oscura: #3d2615;
+  --crema: #fff6e8;
+  --dorado: #ffc861;
+
+  --header-alto: 4rem;
+  --ease-cuento: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-yaco-rojo: var(--yaco-rojo);
+  --color-yaco-rojo-oscuro: var(--yaco-rojo-oscuro);
+  --color-musgo: var(--musgo);
+  --color-musgo-noche: var(--musgo-noche);
+  --color-hoja: var(--hoja);
+  --color-hoja-oscura: var(--hoja-oscura);
+  --color-luz-hada: var(--luz-hada);
+  --color-cielo: var(--cielo);
+  --color-madera: var(--madera);
+  --color-corteza: var(--corteza);
+  --color-corteza-oscura: var(--corteza-oscura);
+  --color-crema: var(--crema);
+  --color-dorado: var(--dorado);
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-nunito), system-ui, sans-serif;
+}
+
+html {
+  background: var(--crema);
+  color: var(--corteza-oscura);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--crema);
+  font-family: var(--font-sans);
+  overflow-x: clip;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 100, "WONK" 0;
+}
+
+:focus-visible {
+  outline: 3px solid var(--dorado);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- Escena: el cuadro del video ----------
+   El cuadro tiene la proporción del video y cubre la pantalla como object-fit: cover.
+   Así las luces y los hotspots, en % del cuadro, quedan siempre sobre el mismo punto real. */
+.escena {
+  position: relative;
+  height: 100svh;
+  min-height: 34rem;
+  overflow: hidden;
+  background: var(--musgo-noche);
+  isolation: isolate;
+}
+.escena-cuadro {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  aspect-ratio: 9 / 16;
+  width: max(100%, calc(max(100svh, 34rem) * 9 / 16));
+  transform: translate(-50%, -50%);
+}
+.escena-cuadro > * {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Encuadre: horizontal desde proporción 1:1 en adelante, vertical por debajo. */
+@media not all and (min-aspect-ratio: 1/1) {
+  .solo-horizontal {
+    display: none !important;
+  }
+}
+@media (min-aspect-ratio: 1/1) {
+  .escena-cuadro {
+    aspect-ratio: 16 / 9;
+    width: max(100%, calc(max(100svh, 34rem) * 16 / 9));
+  }
+  .solo-vertical {
+    display: none !important;
+  }
+}
+
+.escena-velo {
+  background:
+    linear-gradient(to bottom, rgb(26 42 23 / 0.75) 0%, rgb(26 42 23 / 0) 28%),
+    linear-gradient(to top, rgb(26 42 23 / 0.85) 0%, rgb(26 42 23 / 0) 38%),
+    radial-gradient(ellipse at center, transparent 55%, rgb(26 42 23 / 0.45) 100%);
+}
+
+/* Entrada del hero: sólo transform, para que el texto pinte en el primer cuadro (LCP). */
+@keyframes subir {
+  from { transform: translateY(18px); }
+  to { transform: none; }
+}
+.entra {
+  animation: subir 0.9s var(--ease-cuento) both;
+  animation-delay: var(--d, 0s);
+}
+
+/* ---------- Luces del árbol ---------- */
+.luz {
+  position: absolute;
+  left: calc(var(--x) * 1%);
+  top: calc(var(--y) * 1%);
+  width: calc(var(--r) * 1.1vmin + 6px);
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #e9fbff 0%, var(--luz-hada) 35%, rgb(79 214 255 / 0) 70%);
+  box-shadow: 0 0 calc(var(--r) * 18px) calc(var(--r) * 4px) rgb(79 214 255 / 0.45);
+  opacity: 0;
+  animation:
+    encender 0.9s ease-out var(--d) forwards,
+    respirar var(--t) ease-in-out calc(var(--d) + 0.9s) infinite;
+}
+@keyframes encender {
+  0% { opacity: 0; transform: scale(0.3); }
+  60% { opacity: 1; transform: scale(1.25); }
+  100% { opacity: 0.9; transform: scale(1); }
+}
+@keyframes respirar {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 0.35; transform: scale(0.8); }
+}
+
+/* ---------- Hotspots ---------- */
+.hotspot {
+  position: absolute;
+  left: calc(var(--xm) * 1%);
+  top: calc(var(--ym) * 1%);
+  translate: -50% -50%;
+}
+/* La etiqueta cuelga del orbe y se corre según el lado: a la izquierda del cuadro se abre hacia
+   la derecha y viceversa, para no salirse de la pantalla. */
+.hotspot-etiqueta {
+  translate: calc(var(--xm) * -1%) 0;
+}
+@media (min-aspect-ratio: 1/1) {
+  .hotspot {
+    left: calc(var(--xd) * 1%);
+    top: calc(var(--yd) * 1%);
+  }
+  .hotspot-etiqueta {
+    translate: calc(var(--xd) * -1%) 0;
+  }
+}
+.hotspot-orbe {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.hotspot-orbe::before,
+.hotspot-orbe::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+.hotspot-orbe::before {
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, #fffaf0 0%, var(--dorado) 55%, #ffb02e 100%);
+  box-shadow: 0 0 14px 4px rgb(255 200 97 / 0.65);
+  transition: transform 0.25s var(--ease-cuento);
+}
+.hotspot-orbe::after {
+  inset: 6px;
+  border: 2px solid rgb(255 200 97 / 0.8);
+  animation: pulso 2.6s ease-out var(--d, 0s) infinite;
+}
+.hotspot:hover .hotspot-orbe::before,
+.hotspot:focus-visible .hotspot-orbe::before {
+  transform: scale(1.3);
+}
+@keyframes pulso {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  80%, 100% { transform: scale(1.7); opacity: 0; }
+}
+.hotspot-escondido .hotspot-orbe::before {
+  width: 9px;
+  height: 9px;
+  background: radial-gradient(circle, #f2fdff 0%, var(--luz-hada) 70%);
+  box-shadow: 0 0 10px 3px rgb(79 214 255 / 0.5);
+  animation: titilar 3.4s ease-in-out infinite;
+}
+.hotspot-escondido .hotspot-orbe::after {
+  display: none;
+}
+@keyframes titilar {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+/* ---------- Panel de hotspot (dialog) ---------- */
+.panel {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  max-width: none;
+  max-height: none;
+  background: var(--crema);
+  color: var(--corteza-oscura);
+  position: fixed;
+  inset: auto 0 0 0;
+  width: 100%;
+  height: auto;
+  max-height: 88svh;
+  border-radius: 1.75rem 1.75rem 0 0;
+  box-shadow: 0 -20px 60px rgb(26 42 23 / 0.35);
+  transform: translateY(0);
+  transition: transform 0.38s var(--ease-cuento), display 0.38s allow-discrete, overlay 0.38s allow-discrete;
+}
+.panel::backdrop {
+  background: rgb(26 42 23 / 0.55);
+  opacity: 1;
+  transition: opacity 0.38s, display 0.38s allow-discrete, overlay 0.38s allow-discrete;
+}
+.panel:not([open]),
+.panel[data-cerrando] {
+  transform: translateY(105%);
+}
+.panel[data-cerrando]::backdrop {
+  opacity: 0;
+}
+@starting-style {
+  .panel[open] { transform: translateY(105%); }
+  .panel[open]::backdrop { opacity: 0; }
+}
+@media (min-width: 768px) {
+  .panel {
+    inset: 0 0 0 auto;
+    width: min(30rem, 92vw);
+    height: 100dvh;
+    max-height: none;
+    border-radius: 1.75rem 0 0 1.75rem;
+    box-shadow: -20px 0 60px rgb(26 42 23 / 0.35);
+  }
+  .panel:not([open]),
+  .panel[data-cerrando] {
+    transform: translateX(105%);
+  }
+  @starting-style {
+    .panel[open] { transform: translateX(105%); }
+  }
+}
+
+/* ---------- Transición puerta ---------- */
+.puerta-capa {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--crema);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+.puerta-capa[data-estado="video"] {
+  opacity: 1;
+  pointer-events: auto;
+  background: var(--musgo-noche);
+  transition: none;
+}
+.puerta-capa[data-estado="fundido"],
+.puerta-capa[data-estado="crema"] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Indicador de scroll ---------- */
+@keyframes bajar {
+  0%, 100% { transform: translateY(0); opacity: 0.5; }
+  50% { transform: translateY(6px); opacity: 1; }
+}
+.indicador-scroll {
+  animation: bajar 2s ease-in-out infinite;
+}
+
+/* ---------- Movimiento reducido: todo quieto y completo ---------- */
+html[data-motion="reduced"] *,
+html[data-motion="reduced"] *::before,
+html[data-motion="reduced"] *::after {
+  animation-duration: 0.001ms !important;
+  animation-delay: 0s !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+html[data-motion="reduced"] .luz {
+  opacity: 0.9;
+  animation: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .luz { opacity: 0.9; animation: none !important; }
+  .entra, .indicador-scroll, .hotspot-orbe::after { animation: none !important; }
+}
