@@ -44,3 +44,5 @@ next-env.d.ts
 # Briefs internos (no van al repo)
 prompt-don-yaco-claude-code.md
 seedance-don-yaco.md
+
+.vercel
