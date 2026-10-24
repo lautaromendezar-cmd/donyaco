@@ -17,12 +17,12 @@
       "tarjeta": "De un almacén de 1938 al Bosque Urbano.",
       "posicion": {
         "mobile": {
-          "x": 52,
-          "y": 46
+          "x": 50,
+          "y": 44
         },
         "desktop": {
-          "x": 72,
-          "y": 42
+          "x": 50.0,
+          "y": 44
         }
       }
     },
@@ -60,14 +60,8 @@
       },
       "tarjeta": "Bolsa, lata, caja o frasco, llenos con lo que vos elijas.",
       "posicion": {
-        "mobile": {
-          "x": 22,
-          "y": 62
-        },
-        "desktop": {
-          "x": 17,
-          "y": 62
-        }
+        "mobile": null,
+        "desktop": null
       }
     },
     {
@@ -86,12 +80,12 @@
       "tarjeta": "Mesas dulces y bolsitas con la temática que quieras.",
       "posicion": {
         "mobile": {
-          "x": 74,
-          "y": 66
+          "x": 29,
+          "y": 71
         },
         "desktop": {
-          "x": 58,
-          "y": 77
+          "x": 43.4,
+          "y": 71
         }
       }
     },
@@ -111,12 +105,12 @@
       "tarjeta": "Cajas, latas y chocolates importados para regalar.",
       "posicion": {
         "mobile": {
-          "x": 76,
-          "y": 36
+          "x": 87,
+          "y": 55
         },
         "desktop": {
-          "x": 88,
-          "y": 48
+          "x": 61.7,
+          "y": 55
         }
       }
     },
@@ -142,14 +136,8 @@
       },
       "tarjeta": "Kinder, alfajores, importados, sin TACC y latas.",
       "posicion": {
-        "mobile": {
-          "x": 20,
-          "y": 41
-        },
-        "desktop": {
-          "x": 33,
-          "y": 54
-        }
+        "mobile": null,
+        "desktop": null
       }
     },
     {
@@ -169,12 +157,12 @@
       "tarjeta": "Regalos corporativos y precios para kioscos.",
       "posicion": {
         "mobile": {
-          "x": 84,
-          "y": 54
+          "x": 9,
+          "y": 58
         },
         "desktop": {
-          "x": 93,
-          "y": 70
+          "x": 37.0,
+          "y": 58
         }
       }
     }

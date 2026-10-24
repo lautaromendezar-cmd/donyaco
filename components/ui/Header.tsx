@@ -55,7 +55,7 @@ export function Header() {
       <div className="mx-auto flex h-[var(--header-alto)] max-w-7xl items-center justify-between gap-4 px-4 md:px-8">
         <Link href="/" className="shrink-0 rounded-2xl bg-crema px-3 py-1 shadow-md" aria-label="Don Yaco Golosinería, inicio">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/brand/logo-don-yaco.svg" alt="" width={120} height={45} className="h-9 w-auto" />
+          <img src="/brand/logo-don-yaco.webp" alt="" width={480} height={209} className="h-9 w-auto" />
         </Link>
 
         <nav aria-label="Principal" className="hidden lg:block">
