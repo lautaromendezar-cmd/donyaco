@@ -316,3 +316,32 @@ html[data-motion="reduced"] .luz {
   .luz { opacity: 0.9; animation: none !important; }
   .entra, .indicador-scroll, .hotspot-orbe::after { animation: none !important; }
 }
+
+/* ---------- Historia: la página toma color a medida que se baja ---------- */
+:root {
+  --papel: #f1e6d2;
+  --tinta: #2b1d12;
+  --tinta-noche: #15100b;
+}
+@theme inline {
+  --color-papel: var(--papel);
+  --color-tinta: var(--tinta);
+  --color-tinta-noche: var(--tinta-noche);
+}
+.foto-tiempo {
+  filter: grayscale(var(--g, 0)) sepia(calc(var(--g, 0) * 0.35));
+}
+.vereda-cuadro {
+  opacity: 0;
+  transition: opacity 0.35s var(--ease-cuento);
+}
+.vereda-cuadro[data-activa="true"] {
+  opacity: 1;
+}
+.vereda-marca {
+  background: rgb(43 29 18 / 0.14);
+  transition: background-color 0.3s;
+}
+.vereda-marca[data-activa="true"] {
+  background: var(--yaco-rojo);
+}

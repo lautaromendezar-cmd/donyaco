@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: "%s · Don Yaco Golosinería",
   },
   description:
-    "Golosinería en Belgrano y Villa Urquiza. Chocolates importados, el sector Kinder más grande de Capital, más de 200 alfajores y un bosque encantado para recorrer.",
+    "Golosinería familiar desde 1938, en Belgrano, Villa Urquiza y Villa Pueyrredón. Chocolates importados, el sector Kinder más grande de Capital, más de 200 alfajores y un bosque encantado para recorrer.",
   openGraph: {
     type: "website",
     locale: "es_AR",

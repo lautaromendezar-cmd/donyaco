@@ -7,14 +7,14 @@
       "titulo": "El árbol de la dulzura",
       "bajada": "La historia de Don Yaco",
       "texto": [
-        "Don Yaco empezó en Villa Urquiza hace más de diez años, como la golosinería del barrio. En septiembre de 2026 abrió el Bosque Urbano en Belgrano: un local entero convertido en bosque, con este árbol en el centro.",
+        "Don Yaco empezó en 1938, con un almacén en la calle Artigas, en Villa Pueyrredón. Con la tercera generación llegaron Olazábal, en Villa Urquiza, y, en septiembre de 2026, el Bosque Urbano: un local entero convertido en bosque, con este árbol en el centro.",
         "El tronco es trenzado y se apoya sobre piedras redondas. Entre las ramas hay lucecitas azules que se prenden y se apagan despacio. Los chicos lo rodean, los grandes le sacan fotos."
       ],
       "cta": {
-        "texto": "Visitá el Bosque",
-        "href": "/visita"
+        "texto": "Conocé la historia",
+        "href": "/historia"
       },
-      "tarjeta": "La historia de Don Yaco y del Bosque Urbano.",
+      "tarjeta": "De un almacén de 1938 al Bosque Urbano.",
       "posicion": {
         "mobile": {
           "x": 52,
@@ -30,16 +30,16 @@
       "id": "cartel",
       "etiqueta": "El cartel de entrada",
       "titulo": "Cómo llegar",
-      "bajada": "Dos sucursales en CABA",
+      "bajada": "Tres locales en CABA",
       "texto": [
-        "El cartel tallado en madera de la entrada, rodeado de musgo y caramelos, marca el Bosque Urbano de Belgrano. El local histórico sigue en Villa Urquiza."
+        "El cartel tallado en madera de la entrada, rodeado de musgo y caramelos, marca el Bosque Urbano de Belgrano. Olazábal sigue en Villa Urquiza y el almacén de 1938, en la calle Artigas."
       ],
       "tipo": "como-llegar",
       "cta": {
         "texto": "Ver las sucursales",
         "href": "/sucursales/bosque-urbano"
       },
-      "tarjeta": "Las dos sucursales, con mapa y horarios.",
+      "tarjeta": "Los tres locales, con mapa y horarios.",
       "posicion": {
         "mobile": null,
         "desktop": null

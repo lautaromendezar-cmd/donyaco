@@ -5,12 +5,12 @@ import { MotionToggle } from "./MotionToggle";
 export function Footer() {
   return (
     <footer className="bg-musgo-noche px-5 pt-16 pb-28 text-crema md:px-10 md:pb-14">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.3fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/brand/logo-don-yaco.svg" alt="Don Yaco Golosinería" width={160} height={60} className="h-14 w-auto rounded-2xl bg-crema px-3 py-1" loading="lazy" />
           <p className="font-display mt-5 text-3xl font-semibold">Endulzando tus días</p>
-          <p className="mt-2 max-w-xs text-crema/75">Golosinería en Belgrano y Villa Urquiza.</p>
+          <p className="mt-2 max-w-xs text-crema/75">Desde 1938. En Belgrano, Villa Urquiza y Villa Pueyrredón.</p>
           <div className="mt-6 flex flex-wrap gap-2">
             <a href={REDES.instagram} target="_blank" rel="noopener noreferrer" className="rounded-full bg-crema/10 px-4 py-2 font-bold hover:bg-crema/20">
               Instagram
